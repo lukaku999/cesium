@@ -1,22 +1,41 @@
 {
-  "name": "cesium",
+  "name": "cesiumjs-webpack-5-example",
   "version": "1.0.0",
+  "description": "The minimal recommended setup for an app using Cesium with Webpack 5",
+  "homepage": "https://cesium.com/platform/cesiumjs/",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Cesium GS, Inc.",
+    "url": "https://cesium.com"
+  },
+  "keywords": [
+    "cesium",
+    "CesiumJS",
+    "webpack",
+    "example"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CesiumGS/cesium-webpack-example.git"
+  },
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --config webpack.config.js",
+    "start:built": "npx http-server -a localhost -p 8080 dist/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "dependencies": {
+    "cesium": "^1.114.0",
+    "dotenv": "^16.4.5"
+  },
   "devDependencies": {
-    "@babel/core": "^7.25.8",
-    "@babel/preset-env": "^7.25.8",
-    "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^9.1.0",
+    "css-loader": "^6.8.1",
+    "dotenv-webpack": "^8.1.0",
     "html-webpack-plugin": "^5.6.0",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.15.1"
   }
 }
