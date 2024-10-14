@@ -13,10 +13,10 @@ fi
 git fetch
 
 # Checkout the dev branch
-git checkout dev
+git checkout main
 
 # Pull the latest changes for dev branch
-git pull origin dev
+git pull origin main
 
 # Create a new branch from the dev branch
 git checkout -b $BRANCH_NAME
@@ -24,5 +24,5 @@ git checkout -b $BRANCH_NAME
 # Push the new branch to the remote repository
 git push -u origin $BRANCH_NAME
 
-echo "New branch '$BRANCH_NAME' created from 'dev' and pushed to remote repository."
+echo "New branch '$BRANCH_NAME' created from 'main' and pushed to remote repository."
 
