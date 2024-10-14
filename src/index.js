@@ -16,8 +16,7 @@ import "cesium/Build/Cesium/Widgets/widgets.css";
 
 console.log(process.env.TOKEN);
 
-Ion.defaultAccessToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkMjYyZWU0ZS04OTA5LTQxZjEtYjZlNy1hMjY3NzgwOTlhOGYiLCJpZCI6MjQ4MDIzLCJpYXQiOjE3Mjg5MDY2MjN9.jQsKkdOwkcMFAsKGM4-7va9-t4gdqs6zdfeERdTuosc";
+Ion.defaultAccessToken = process.env.TOKEN;
 
 // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
 const viewer = new Viewer("cesiumContainer", {
