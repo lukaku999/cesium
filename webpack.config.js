@@ -38,6 +38,13 @@ module.exports = {
         test: /\.(png|gif|jpg|jpeg|svg|xml|json)$/,
         type: "asset/inline",
       },
+      {
+        test: /\.(glb|gltf)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/[name][ext]", // Or wherever you want to place them in dist
+        },
+      },
     ],
   },
   plugins: [
